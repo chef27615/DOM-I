@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "<h1>DOM<br>Is<br>Awesome</h1>",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -52,9 +52,10 @@ navBar[5].textContent= siteContent.nav['nav-item-6'];
 
 //cta
 const newH = document.querySelector('h1');
-newH.textContent = siteContent.cta['h1'];
+newH.innerHTML = siteContent.cta['h1'];
 
-const lineBreak = document.getElementsByClassName('cta-text');
+
+
 
 
 //bottom
