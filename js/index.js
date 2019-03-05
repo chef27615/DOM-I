@@ -43,12 +43,36 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //navBar
 const navBar = document.querySelectorAll('a');
+
+
 navBar[0].textContent= siteContent.nav['nav-item-1'];
 navBar[1].textContent= siteContent.nav['nav-item-2'];
 navBar[2].textContent= siteContent.nav['nav-item-3'];
 navBar[3].textContent= siteContent.nav['nav-item-4'];
 navBar[4].textContent= siteContent.nav['nav-item-5'];
 navBar[5].textContent= siteContent.nav['nav-item-6'];
+
+navBar.forEach(function(cv){
+  cv.style.color ='green';
+})
+
+const newATag= document.createElement('a');
+newATag.textContent = 'Special';
+newATag.style.color = 'green';
+const trying = document.querySelector('nav');
+console.log(trying);
+
+trying.prepend(newATag);
+
+const anotherNewA = document.createElement('a');
+anotherNewA.textContent = 'Sales';
+anotherNewA.style.color = 'green';
+
+trying.append(anotherNewA);
+
+
+
+
 
 //cta
 const newH = document.querySelector('h1');
@@ -80,7 +104,7 @@ allH4Content[5].textContent = siteContent['main-content']['contact-h4'];
 
 const newPTag = document.querySelectorAll('p');
 
-console.log(newPTag);
+//console.log(newPTag);
 newPTag[0].textContent = siteContent['main-content']['features-content'];
 newPTag[1].textContent = siteContent['main-content']['about-content'];
 newPTag[2].textContent = siteContent['main-content']['services-content'];
