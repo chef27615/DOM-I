@@ -85,6 +85,10 @@ newH.innerHTML = siteContent.cta['h1'];
 //bottom
 const btn = document.querySelector('button');
 btn.textContent = siteContent.cta['button'];
+btn.addEventListener('click', function(e){
+  e.stopPropagation();
+  btn.style.background = 'crimson';
+})
 
 //img in CTA
 const newImg = document.getElementById('cta-img');
